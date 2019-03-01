@@ -115,7 +115,8 @@ a:hover > .fab {
 
 footer {
     text-align: center;
-    bottom: calc(100vh-50px);
+    bottom: 20px;
+    position: fixed;
 }
 
 @media only screen and (max-width: 768px) {

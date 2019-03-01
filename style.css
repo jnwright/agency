@@ -1,0 +1,156 @@
+html{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+width: 100vw;
+}
+
+body {
+     min-height: calc(100% - 45px);
+    font-family: monospace;
+    border: 10px solid #000;
+    margin: 0;
+    padding: 25px 5em 0em 5em;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    flex-basis: 75%;
+}
+
+
+h1, h2 {
+    font-family: helvetica;
+}
+
+.nav {
+    flex-basis: 25%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav > a {
+    color: #000;
+    border-bottom: 3px solid #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px 10px 0px 10px;
+}
+
+.nav > a:hover {
+    border-bottom: 3px solid grey;
+    text-transform: uppercase;
+}
+
+#blurb {
+    width: 60%;
+    position: absolute;
+    z-index: 1;
+}
+
+#blurb > p, #blurb > ul {
+    width: 80%;
+    background-color: #fff;
+    margin-top: 15em;
+    padding: 50px;
+    position: absolute;
+    min-height: 100px;
+}
+
+#img > img {
+    z-index: -1;
+    width: 60%;
+    margin-left: 30%;
+}
+
+#services, #contact {
+    cursor: pointer;
+}
+
+.services,.contact {
+    opacity: 0;
+
+}
+
+.contact.show,.services.show {
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    background: repeating-linear-gradient(45deg, #fff, #fff 5px, #e3e3e3 5px, #e3e3e3 10px);
+}
+
+.contact > #icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.fab {
+    font-size: 45px;
+    margin: .5em .5em 0 .5em;
+}
+
+a > .fab {
+    color: #000;
+    border-bottom: 3px solid #000;
+}
+
+a:hover > .fab {
+    border-bottom: 3px solid grey;
+}
+
+footer {
+    text-align: center;
+    padding-top: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+    #blurb {
+        position: relative;
+        width: 100%;
+        min-height: 600px;
+        z-index: 1;
+    }
+
+    #blurb > p, #blurb > ul {
+        width: 90%;
+        background-color: #fff;
+        margin-top: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    #img > img {
+        display: none;
+    }
+    
+    .contact,.services {
+        opacity: 1;
+    }
+    
+    .nav {
+        display: none;
+    }
+    
+    
+    .fab {
+        font-size: 20px;
+        margin: 0;
+    }
+
+}
+}
